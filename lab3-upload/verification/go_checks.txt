@@ -1,0 +1,32 @@
+go build -o dbms .
+go vet ./...
+test -z "$(gofmt -l .)"
+go test ./... -coverprofile=coverage.out
+ok  	laba3go	0.075s	coverage: 92.0% of statements
+go tool cover -func=coverage.out | tail -1
+total:				(statements)		92.0%
+go tool cover -html=coverage.out -o coverage.html
+go tool cover -func=coverage.out | awk '/^total:/ { if ($3+0 < 85) exit 1; found=1 } END { if (!found) exit 1 }'
+go test -run=^$ -bench=. -benchmem -benchtime=100ms ./...
+goos: linux
+goarch: amd64
+pkg: laba3go
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkArrayPushBack/1000-5         	   15298	      7325 ns/op	   37184 B/op	       9 allocs/op
+BenchmarkArrayPushBack/10000-5        	    1035	    114505 ns/op	  528707 B/op	      13 allocs/op
+BenchmarkStackPush/1000-5             	    4852	     26830 ns/op	   24000 B/op	    1000 allocs/op
+BenchmarkStackPush/10000-5            	     470	    255744 ns/op	  240000 B/op	   10000 allocs/op
+BenchmarkQueuePush/1000-5             	    4632	     26013 ns/op	   24000 B/op	    1000 allocs/op
+BenchmarkQueuePush/10000-5            	     432	    300929 ns/op	  240000 B/op	   10000 allocs/op
+BenchmarkFlistAddTail/1000-5          	     195	    640977 ns/op	   24000 B/op	    1000 allocs/op
+BenchmarkFlistAddTail/10000-5         	       2	  59530374 ns/op	  240000 B/op	   10000 allocs/op
+BenchmarkDlistPushBack/1000-5         	    4198	     31079 ns/op	   32000 B/op	    1000 allocs/op
+BenchmarkDlistPushBack/10000-5        	     423	    284763 ns/op	  320004 B/op	   10000 allocs/op
+BenchmarkTreeInsert/1000-5            	    1300	     83021 ns/op	   31872 B/op	     996 allocs/op
+BenchmarkTreeInsert/10000-5           	      79	   1890554 ns/op	  318182 B/op	    9943 allocs/op
+BenchmarkHashAdd/1000-5               	    1522	     72415 ns/op	   21760 B/op	    2800 allocs/op
+BenchmarkHashAdd/10000-5              	      80	   1542802 ns/op	  237762 B/op	   29800 allocs/op
+BenchmarkKukushkaInsert/1000-5        	     870	    116615 ns/op	   38736 B/op	    3778 allocs/op
+BenchmarkKukushkaInsert/10000-5       	      54	   2208684 ns/op	  705560 B/op	   73042 allocs/op
+PASS
+ok  	laba3go	2.648s

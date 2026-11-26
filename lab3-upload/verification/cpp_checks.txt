@@ -1,0 +1,869 @@
+Lab3 C++ verification
+g++ (Debian 14.2.0-19) 14.2.0
+clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0)
+
+=== Compilation ===
+tests/boost/test_tree.cpp:8:1: warning: multi-line comment [-Wcomment]
+    8 | //      / \
+      | ^
+
+=== Boost.Test ===
+Running 96 test cases...
+
+Test module "LabTests" has passed with:
+  96 test cases out of 96 passed
+  30295 assertions out of 30295 passed
+
+  Test case "ArrayTest_NewArrayIsEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_PushBackAddsToEnd" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "ArrayTest_GrowsBeyondStartCapacity" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "ArrayTest_InsertInMiddle" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "ArrayTest_InsertWhenFull" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "ArrayTest_InsertWrongIndex" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_RemoveShiftsElements" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "ArrayTest_RemoveWrongIndex" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_SetAtChangesValue" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_SetAtWrongIndex" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_GetAtWrongIndex" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayTest_PrintShowsElements" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "ArrayHandlerTest_AllCommands" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "ArrayHandlerTest_WrongTypeIsRejected" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "CommandsTest_AllKnownCommands" has passed with:
+    50 assertions out of 50 passed
+
+  Test case "CommandsTest_UnknownCommand" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "CommandsTest_WrongTypeWhenNoStructure" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "CommandsTest_WrongTypeWhenSameType" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "CommandsTest_WrongTypeWhenOtherType" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "DlistTest_NewListIsEmpty" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "DlistTest_PushBackAndPopBack" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "DlistTest_PushFrontAndPopFront" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "DlistTest_PushAfterNode" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "DlistTest_PushBeforeNode" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "DlistTest_PopAfterNode" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "DlistTest_PopBeforeNode" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "DlistTest_FindName" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "DlistTest_PopName" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "DlistHandlerTest_AllCommands" has passed with:
+    5 assertions out of 5 passed
+
+  Test case "DlistHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "FlistTest_NewListIsEmpty" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_PushFrontAddsToStart" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "FlistTest_PopFront" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_AddTailAddsToEnd" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "FlistTest_PopTail" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "FlistTest_AddOneAfterNode" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_DeleteNodeAfterNode" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_AddBefore" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_DeleteBefore" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "FlistTest_FindValue" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "FlistTest_DeleteValue" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "FlistTest_PrintReverse" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "FlistHandlerTest_AllCommands" has passed with:
+    5 assertions out of 5 passed
+
+  Test case "FlistHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "HashTableTest_AddAndSearch" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "HashTableTest_DuplicateIsIgnored" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "HashTableTest_CollisionsGoToOneChain" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "HashTableTest_RemoveFromChain" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "HashTableTest_NegativeKey" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "KukushkaTest_InsertAndSearch" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "KukushkaTest_DuplicateIsIgnored" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "KukushkaTest_CollisionMovesToSecondTable" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "KukushkaTest_RemoveFromBothTables" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "KukushkaTest_GrowsWhenFull" has passed with:
+    101 assertions out of 101 passed
+
+  Test case "HashHandlerTest_AllCommands" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "HashHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "KukushkaHandlerTest_AllCommands" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "KukushkaHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "QueueTest_NewQueueIsEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "QueueTest_TopIsFirstPushed" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "QueueTest_PopRemovesFirst" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "QueueTest_PopLastMakesEmpty" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "QueueTest_PopAndTopOnEmpty" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "QueueTest_PrintFromHead" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "QueueHandlerTest_AllCommands" has passed with:
+    5 assertions out of 5 passed
+
+  Test case "QueueHandlerTest_PopEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "QueueHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "SerializationTest_Array" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "SerializationTest_Stack" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "SerializationTest_Queue" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "SerializationTest_Flist" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "SerializationTest_Dlist" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "SerializationTest_Tree" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "SerializationTest_HashTable" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "SerializationTest_Kukushka" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "SerializationTest_LoadMissingFile" has passed with:
+    8 assertions out of 8 passed
+
+  Test case "StackTest_NewStackIsEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "StackTest_TopIsLastPushed" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "StackTest_PopRemovesTop" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "StackTest_PopAndTopOnEmpty" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "StackTest_PrintFromTop" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "StackHandlerTest_AllCommands" has passed with:
+    5 assertions out of 5 passed
+
+  Test case "StackHandlerTest_PopEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "StackHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "TreeTest_NewTreeIsEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "TreeTest_InsertAndSearch" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "TreeTest_InsertGoesLeftAndRight" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "TreeTest_Traversals" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "TreeTest_BfsOnEmpty" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "TreeTest_CompleteTree" has passed with:
+    2 assertions out of 2 passed
+
+  Test case "TreeTest_NotCompleteTree" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "TreeHandlerTest_AllCommands" has passed with:
+    7 assertions out of 7 passed
+
+  Test case "TreeHandlerTest_NotComplete" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "TreeHandlerTest_WrongTypeIsRejected" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "AVL_RotationsAndRemove" has passed with:
+    29942 assertions out of 29942 passed
+
+  Test case "AVL_DeleteCommand" has passed with:
+    1 assertion out of 1 passed
+
+
+=== CLI ===
+CLI smoke test (binary): OK
+CLI smoke test (json): OK
+
+=== gcov line coverage ===
+array.cpp             117/117  100.00%
+singly_list.cpp       190/191   99.48%
+doubly_list.cpp       207/207  100.00%
+stack.cpp              79/79   100.00%
+queue.cpp              85/85   100.00%
+hash_table.cpp        245/248   98.79%
+avl_tree.cpp          190/190  100.00%
+commands.cpp           63/63   100.00%
+main.cpp               82/99    82.83%
+TOTAL                1258/1279  98.36%
+
+=== std::chrono benchmark (GCC -O2) ===
+C++ benchmark: mean of 10 runs; construction, insertion and destruction
+Structure                    N          us/run         us/item
+Array                     1000           10.61            0.01
+Stack                     1000           18.83            0.02
+Queue                     1000           15.77            0.02
+Singly linked list        1000          936.82            0.94
+Doubly linked list        1000           18.36            0.02
+AVL                       1000           69.34            0.07
+Hash chaining             1000           54.59            0.05
+Cuckoo hash               1000           95.00            0.10
+Array                    10000          272.18            0.03
+Stack                    10000          171.13            0.02
+Queue                    10000          153.29            0.02
+Singly linked list       10000       109984.82           11.00
+Doubly linked list       10000          171.34            0.02
+AVL                      10000         1494.63            0.15
+Hash chaining            10000         3242.63            0.32
+Cuckoo hash              10000         2734.25            0.27
+
+=== Clang Static Analyzer ===
+Checking array.cpp
+Checking singly_list.cpp
+Checking doubly_list.cpp
+Checking stack.cpp
+Checking queue.cpp
+Checking hash_table.cpp
+hash_table.cpp:83:20: warning: Potential memory leak [cplusplus.NewDeleteLeaks]
+   83 |             delete current;
+      |                    ^
+hash_table.cpp:122:9: note: Assuming the condition is false
+  122 |     if (wrongType(db, name, "hash")) return;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:122:5: note: Taking false branch
+  122 |     if (wrongType(db, name, "hash")) return;
+      |     ^
+hash_table.cpp:125:9: note: Assuming 'binaryMode' is false
+  125 |     if (binaryMode) ht.loadBinary(binaryFile(name));
+      |         ^~~~~~~~~~
+hash_table.cpp:125:5: note: Taking false branch
+  125 |     if (binaryMode) ht.loadBinary(binaryFile(name));
+      |     ^
+hash_table.cpp:126:14: note: Assuming the condition is true
+  126 |     else if (db.as_object().contains(name))
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:126:10: note: Taking true branch
+  126 |     else if (db.as_object().contains(name))
+      |          ^
+hash_table.cpp:128:28: note: Assuming '__begin3' is not equal to '__end3'
+  128 |         for (auto& element : entry(db, name)["data"].as_array()) ht.add(boost::json::value_to<int>(element));
+      |                            ^
+hash_table.cpp:128:66: note: Calling 'HashTable::add'
+  128 |         for (auto& element : entry(db, name)["data"].as_array()) ht.add(boost::json::value_to<int>(element));
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:58:9: note: Assuming the condition is false
+   58 |     if (search(key)) return;
+      |         ^~~~~~~~~~~
+hash_table.cpp:58:5: note: Taking false branch
+   58 |     if (search(key)) return;
+      |     ^
+hash_table.cpp:60:22: note: Memory is allocated
+   60 |     Node* new_node = new Node{key, table[index]};
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:128:66: note: Returned allocated memory
+  128 |         for (auto& element : entry(db, name)["data"].as_array()) ht.add(boost::json::value_to<int>(element));
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:132:5: note: Control jumps to 'case HDEL:'  at line 139
+  132 |     switch (command)
+      |     ^
+hash_table.cpp:140:13: note: Taking false branch
+  140 |             if (!(ss >> value)) { cout << "неверные аргументы\n"; return; }
+      |             ^
+hash_table.cpp:141:13: note: Calling 'HashTable::remove'
+  141 |             ht.remove(value);
+      |             ^~~~~~~~~~~~~~~~
+hash_table.cpp:71:12: note: Assuming the condition is true
+   71 |     while (current != nullptr)
+      |            ^~~~~~~~~~~~~~~~~~
+hash_table.cpp:71:5: note: Loop condition is true.  Entering loop body
+   71 |     while (current != nullptr)
+      |     ^
+hash_table.cpp:73:13: note: Assuming 'key' is equal to field 'value'
+   73 |         if (current->value == key)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+hash_table.cpp:73:9: note: Taking true branch
+   73 |         if (current->value == key)
+      |         ^
+hash_table.cpp:75:13: note: Taking true branch
+   75 |             if (prev == nullptr)
+      |             ^
+hash_table.cpp:83:20: note: Potential memory leak
+   83 |             delete current;
+      |                    ^
+1 warning generated.
+Checking avl_tree.cpp
+avl_tree.cpp:24:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+   24 |     return node ? node->height : 0;
+      |     ^
+avl_tree.cpp:216:9: note: Assuming the condition is false
+  216 |     if (wrongType(db, name, "tree")) return;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:216:5: note: Taking false branch
+  216 |     if (wrongType(db, name, "tree")) return;
+      |     ^
+avl_tree.cpp:219:9: note: Assuming 'binaryMode' is true
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |         ^~~~~~~~~~
+avl_tree.cpp:219:5: note: Taking true branch
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |     ^
+avl_tree.cpp:226:5: note: Control jumps to 'case TINSERT:'  at line 228
+  226 |     switch (command)
+      |     ^
+avl_tree.cpp:229:13: note: Taking false branch
+  229 |             if (!(ss >> value)) { cout << "неверные аргументы\n"; return; }
+      |             ^
+avl_tree.cpp:230:13: note: Calling 'AVLTree::insert'
+  230 |             tr.insert(value);
+      |             ^~~~~~~~~~~~~~~~
+avl_tree.cpp:103:12: note: Calling 'AVLTree::insertNode'
+  103 |     root = insertNode(root, key);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking true branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:73:23: note: Uninitialized value stored to field 'height'
+   73 |     if (!node) return new TreeNode{key};
+      |                       ^~~~~~~~~~~~~~~~~
+avl_tree.cpp:74:39: note: Returning from 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:77:12: note: Calling 'AVLTree::balance'
+   77 |     return balance(node);
+      |            ^~~~~~~~~~~~~
+avl_tree.cpp:54:5: note: Calling 'AVLTree::updateHeight'
+   54 |     updateHeight(node);
+      |     ^~~~~~~~~~~~~~~~~~
+avl_tree.cpp:29:33: note: Calling 'AVLTree::height'
+   29 |     node->height = 1 + std::max(height(node->left), height(node->right));
+      |                                 ^~~~~~~~~~~~~~~~~~
+avl_tree.cpp:24:12: note: 'node' is non-null
+   24 |     return node ? node->height : 0;
+      |            ^~~~
+avl_tree.cpp:24:12: note: '?' condition is true
+avl_tree.cpp:24:5: note: Undefined or garbage value returned to caller
+   24 |     return node ? node->height : 0;
+      |     ^      ~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:45:18: warning: Access to field 'right' results in a dereference of a null pointer (loaded from variable 'left') [core.NullDereference]
+   45 |     node->left = left->right;
+      |                  ^
+avl_tree.cpp:216:9: note: Assuming the condition is false
+  216 |     if (wrongType(db, name, "tree")) return;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:216:5: note: Taking false branch
+  216 |     if (wrongType(db, name, "tree")) return;
+      |     ^
+avl_tree.cpp:219:9: note: Assuming 'binaryMode' is true
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |         ^~~~~~~~~~
+avl_tree.cpp:219:5: note: Taking true branch
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |     ^
+avl_tree.cpp:226:5: note: Control jumps to 'case TDEL:'  at line 233
+  226 |     switch (command)
+      |     ^
+avl_tree.cpp:234:13: note: Taking false branch
+  234 |             if (!(ss >> value)) { cout << "неверные аргументы\n"; return; }
+      |             ^
+avl_tree.cpp:235:13: note: Calling 'AVLTree::remove'
+  235 |             tr.remove(value);
+      |             ^~~~~~~~~~~~~~~~
+avl_tree.cpp:108:12: note: Calling 'AVLTree::removeNode'
+  108 |     root = removeNode(root, key);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:82:9: note: Assuming 'node' is non-null
+   82 |     if (!node) return nullptr;
+      |         ^~~~~
+avl_tree.cpp:82:5: note: Taking false branch
+   82 |     if (!node) return nullptr;
+      |     ^
+avl_tree.cpp:83:9: note: Assuming 'key' is < field 'key'
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:83:5: note: Taking true branch
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |     ^
+avl_tree.cpp:83:39: note: Calling 'AVLTree::removeNode'
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:82:9: note: Assuming 'node' is non-null
+   82 |     if (!node) return nullptr;
+      |         ^~~~~
+avl_tree.cpp:82:5: note: Taking false branch
+   82 |     if (!node) return nullptr;
+      |     ^
+avl_tree.cpp:83:9: note: Assuming 'key' is >= field 'key'
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:83:5: note: Taking false branch
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |     ^
+avl_tree.cpp:84:14: note: Assuming 'key' is <= field 'key'
+   84 |     else if (key > node->key) node->right = removeNode(node->right, key);
+      |              ^~~~~~~~~~~~~~~
+avl_tree.cpp:84:10: note: Taking false branch
+   84 |     else if (key > node->key) node->right = removeNode(node->right, key);
+      |          ^
+avl_tree.cpp:87:13: note: Assuming field 'left' is non-null
+   87 |         if (!node->left || !node->right)
+      |             ^~~~~~~~~~~
+avl_tree.cpp:87:13: note: Left side of '||' is false
+avl_tree.cpp:87:28: note: Assuming field 'right' is non-null
+   87 |         if (!node->left || !node->right)
+      |                            ^~~~~~~~~~~~
+avl_tree.cpp:87:9: note: Taking false branch
+   87 |         if (!node->left || !node->right)
+      |         ^
+avl_tree.cpp:94:9: note: Loop condition is true.  Entering loop body
+   94 |         while (next->left) next = next->left;
+      |         ^
+avl_tree.cpp:94:9: note: Loop condition is false. Execution continues on line 95
+avl_tree.cpp:96:23: note: Calling 'AVLTree::removeNode'
+   96 |         node->right = removeNode(node->right, next->key);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:82:10: note: 'node' is non-null
+   82 |     if (!node) return nullptr;
+      |          ^~~~
+avl_tree.cpp:82:5: note: Taking false branch
+   82 |     if (!node) return nullptr;
+      |     ^
+avl_tree.cpp:83:9: note: Assuming 'key' is >= field 'key'
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:83:5: note: Taking false branch
+   83 |     if (key < node->key) node->left = removeNode(node->left, key);
+      |     ^
+avl_tree.cpp:84:14: note: Assuming 'key' is <= field 'key'
+   84 |     else if (key > node->key) node->right = removeNode(node->right, key);
+      |              ^~~~~~~~~~~~~~~
+avl_tree.cpp:84:10: note: Taking false branch
+   84 |     else if (key > node->key) node->right = removeNode(node->right, key);
+      |          ^
+avl_tree.cpp:87:20: note: Field 'left' is non-null
+   87 |         if (!node->left || !node->right)
+      |                    ^
+avl_tree.cpp:87:13: note: Left side of '||' is false
+   87 |         if (!node->left || !node->right)
+      |             ^
+avl_tree.cpp:87:28: note: Assuming field 'right' is non-null
+   87 |         if (!node->left || !node->right)
+      |                            ^~~~~~~~~~~~
+avl_tree.cpp:87:9: note: Taking false branch
+   87 |         if (!node->left || !node->right)
+      |         ^
+avl_tree.cpp:94:9: note: Loop condition is true.  Entering loop body
+   94 |         while (next->left) next = next->left;
+      |         ^
+avl_tree.cpp:94:16: note: Assuming pointer value is null
+   94 |         while (next->left) next = next->left;
+      |                ^~~~~~~~~~
+avl_tree.cpp:94:9: note: Loop condition is false. Execution continues on line 95
+   94 |         while (next->left) next = next->left;
+      |         ^
+avl_tree.cpp:98:12: note: Calling 'AVLTree::balance'
+   98 |     return balance(node);
+      |            ^~~~~~~~~~~~~
+avl_tree.cpp:56:9: note: Assuming 'factor' is <= 1
+   56 |     if (factor > 1)
+      |         ^~~~~~~~~~
+avl_tree.cpp:56:5: note: Taking false branch
+   56 |     if (factor > 1)
+      |     ^
+avl_tree.cpp:62:9: note: Assuming the condition is true
+   62 |     if (factor < -1)
+      |         ^~~~~~~~~~~
+avl_tree.cpp:62:5: note: Taking true branch
+   62 |     if (factor < -1)
+      |     ^
+avl_tree.cpp:64:13: note: Assuming the condition is true
+   64 |         if (height(node->right->left) > height(node->right->right))
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:64:9: note: Taking true branch
+   64 |         if (height(node->right->left) > height(node->right->right))
+      |         ^
+avl_tree.cpp:65:27: note: Calling 'AVLTree::rotateRight'
+   65 |             node->right = rotateRight(node->right);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:44:5: note: 'left' initialized to a null pointer value
+   44 |     TreeNode* left = node->left;
+      |     ^~~~~~~~~~~~~~
+avl_tree.cpp:45:18: note: Access to field 'right' results in a dereference of a null pointer (loaded from variable 'left')
+   45 |     node->left = left->right;
+      |                  ^~~~
+avl_tree.cpp:58:13: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+   58 |         if (height(node->left->right) > height(node->left->left))
+      |             ^
+avl_tree.cpp:216:9: note: Assuming the condition is false
+  216 |     if (wrongType(db, name, "tree")) return;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:216:5: note: Taking false branch
+  216 |     if (wrongType(db, name, "tree")) return;
+      |     ^
+avl_tree.cpp:219:9: note: Assuming 'binaryMode' is true
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |         ^~~~~~~~~~
+avl_tree.cpp:219:5: note: Taking true branch
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |     ^
+avl_tree.cpp:226:5: note: Control jumps to 'case TINSERT:'  at line 228
+  226 |     switch (command)
+      |     ^
+avl_tree.cpp:229:13: note: Taking false branch
+  229 |             if (!(ss >> value)) { cout << "неверные аргументы\n"; return; }
+      |             ^
+avl_tree.cpp:230:13: note: Calling 'AVLTree::insert'
+  230 |             tr.insert(value);
+      |             ^~~~~~~~~~~~~~~~
+avl_tree.cpp:103:12: note: Calling 'AVLTree::insertNode'
+  103 |     root = insertNode(root, key);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking true branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:73:23: note: Uninitialized value stored to field 'right'
+   73 |     if (!node) return new TreeNode{key};
+      |                       ^~~~~~~~~~~~~~~~~
+avl_tree.cpp:74:39: note: Returning from 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:77:12: note: Calling 'AVLTree::balance'
+   77 |     return balance(node);
+      |            ^~~~~~~~~~~~~
+avl_tree.cpp:56:9: note: Assuming 'factor' is > 1
+   56 |     if (factor > 1)
+      |         ^~~~~~~~~~
+avl_tree.cpp:56:5: note: Taking true branch
+   56 |     if (factor > 1)
+      |     ^
+avl_tree.cpp:58:13: note: 1st function call argument is an uninitialized value
+   58 |         if (height(node->left->right) > height(node->left->left))
+      |             ^      ~~~~~~~~~~~~~~~~~
+avl_tree.cpp:64:13: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+   64 |         if (height(node->right->left) > height(node->right->right))
+      |             ^
+avl_tree.cpp:216:9: note: Assuming the condition is false
+  216 |     if (wrongType(db, name, "tree")) return;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:216:5: note: Taking false branch
+  216 |     if (wrongType(db, name, "tree")) return;
+      |     ^
+avl_tree.cpp:219:9: note: Assuming 'binaryMode' is true
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |         ^~~~~~~~~~
+avl_tree.cpp:219:5: note: Taking true branch
+  219 |     if (binaryMode) tr.loadBinary(binaryFile(name));
+      |     ^
+avl_tree.cpp:226:5: note: Control jumps to 'case TINSERT:'  at line 228
+  226 |     switch (command)
+      |     ^
+avl_tree.cpp:229:13: note: Taking false branch
+  229 |             if (!(ss >> value)) { cout << "неверные аргументы\n"; return; }
+      |             ^
+avl_tree.cpp:230:13: note: Calling 'AVLTree::insert'
+  230 |             tr.insert(value);
+      |             ^~~~~~~~~~~~~~~~
+avl_tree.cpp:103:12: note: Calling 'AVLTree::insertNode'
+  103 |     root = insertNode(root, key);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is < field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking true branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:74:39: note: Calling 'AVLTree::insertNode'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is non-null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking false branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:74:9: note: Assuming 'key' is >= field 'key'
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |         ^~~~~~~~~~~~~~~
+avl_tree.cpp:74:5: note: Taking false branch
+   74 |     if (key < node->key) node->left = insertNode(node->left, key);
+      |     ^
+avl_tree.cpp:75:14: note: Assuming 'key' is > field 'key'
+   75 |     else if (key > node->key) node->right = insertNode(node->right, key);
+      |              ^~~~~~~~~~~~~~~
+avl_tree.cpp:75:10: note: Taking true branch
+   75 |     else if (key > node->key) node->right = insertNode(node->right, key);
+      |          ^
+avl_tree.cpp:75:45: note: Calling 'AVLTree::insertNode'
+   75 |     else if (key > node->key) node->right = insertNode(node->right, key);
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:73:9: note: Assuming 'node' is null
+   73 |     if (!node) return new TreeNode{key};
+      |         ^~~~~
+avl_tree.cpp:73:5: note: Taking true branch
+   73 |     if (!node) return new TreeNode{key};
+      |     ^
+avl_tree.cpp:73:23: note: Uninitialized value stored to field 'left'
+   73 |     if (!node) return new TreeNode{key};
+      |                       ^~~~~~~~~~~~~~~~~
+avl_tree.cpp:75:45: note: Returning from 'AVLTree::insertNode'
+   75 |     else if (key > node->key) node->right = insertNode(node->right, key);
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+avl_tree.cpp:77:12: note: Calling 'AVLTree::balance'
+   77 |     return balance(node);
+      |            ^~~~~~~~~~~~~
+avl_tree.cpp:56:9: note: Assuming 'factor' is <= 1
+   56 |     if (factor > 1)
+      |         ^~~~~~~~~~
+avl_tree.cpp:56:5: note: Taking false branch
+   56 |     if (factor > 1)
+      |     ^
+avl_tree.cpp:62:9: note: Assuming the condition is true
+   62 |     if (factor < -1)
+      |         ^~~~~~~~~~~
+avl_tree.cpp:62:5: note: Taking true branch
+   62 |     if (factor < -1)
+      |     ^
+avl_tree.cpp:64:13: note: 1st function call argument is an uninitialized value
+   64 |         if (height(node->right->left) > height(node->right->right))
+      |             ^      ~~~~~~~~~~~~~~~~~
+4 warnings generated.
+Checking commands.cpp
+Checking main.cpp
+
+=== ASan/UBSan (instrumented data structures, Boost.Test) ===
+Running 96 test cases...
+
+Test module "LabTests" has passed with:
+  96 test cases out of 96 passed
+  30295 assertions out of 30295 passed
+
+
+=== make coverage ===
+Running 96 test cases...
+
+Test module "LabTests" has passed with:
+  96 test cases out of 96 passed
+  30295 assertions out of 30295 passed
+
+bash scripts/smoke.sh ./coverage_dbms
+CLI smoke test (binary): OK
+CLI smoke test (json): OK
+python3 scripts/coverage.py .coverage-build coverage
+array.cpp             117/117  100.00%
+singly_list.cpp       190/191   99.48%
+doubly_list.cpp       207/207  100.00%
+stack.cpp              79/79   100.00%
+queue.cpp              85/85   100.00%
+hash_table.cpp        245/248   98.79%
+avl_tree.cpp          190/190  100.00%
+commands.cpp           63/63   100.00%
+main.cpp               82/99    82.83%
+TOTAL                1258/1279  98.36%

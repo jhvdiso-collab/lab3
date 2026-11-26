@@ -1,0 +1,164 @@
+@startuml
+skinparam classAttributeIconSize 0
+class FNode <<struct>> {
+ +Value : string
+ +Next : *FNode
+}
+class Flist <<struct>> {
+ -head : *FNode
+ +IsEmptyList()
+ +PushFront()
+ +PopFront()
+ +AddOne()
+ +DeleteNode()
+ +AddTail()
+ +PopTail()
+ +AddBefore()
+ +DeleteBefore()
+ +FindValue()
+ +DeleteValue()
+ -printReverseFrom()
+ +PrintReverse()
+ +PrintList()
+ +GetHead()
+ +SaveBinary()
+ +LoadBinary()
+}
+class Array <<struct>> {
+ -data : []string
+ -size : int
+ -capacity : int
+ -resizeArray()
+ +PushBack()
+ +InsertAt()
+ +RemoveAt()
+ +SetAt()
+ +GetAt()
+ +PrintArray()
+ +Length()
+ +SaveBinary()
+ +LoadBinary()
+}
+class Node <<struct>> {
+ +Value : int
+ +Next : *Node
+}
+class HashTable <<struct>> {
+ -table : [hashSize]*Node
+ -hashKey()
+ +Search()
+ +Add()
+ +Remove()
+ +Print()
+ +GetAll()
+ +SaveBinary()
+ +LoadBinary()
+}
+class Kukushka <<struct>> {
+ -size : int
+ -t1 : []int
+ -t2 : []int
+ -used1 : []bool
+ -used2 : []bool
+ -hash1()
+ -hash2()
+ -moreplace()
+ +Search()
+ +Insert()
+ +Remove()
+ +Print()
+ +GetAll()
+ +SaveBinary()
+ +LoadBinary()
+}
+class DNode <<struct>> {
+ +Person : string
+ +Next : *DNode
+ +Prev : *DNode
+}
+class Dlist <<struct>> {
+ -head : *DNode
+ -tail : *DNode
+ +IsEmptyList()
+ +PushBack()
+ +PopBack()
+ +PushFront()
+ +PopFront()
+ +PushBetween()
+ +PushBefore()
+ +PopAfter()
+ +PopBefore()
+ +PrintForward()
+ +PrintBackward()
+ +FindName()
+ +PopName()
+ +GetHead()
+ +SaveBinary()
+ +LoadBinary()
+}
+class TreeNode <<struct>> {
+ +Key : int
+ +Left : *TreeNode
+ +Right : *TreeNode
+ +Height : int
+}
+class AVLTree <<struct>> {
+ -root : *TreeNode
+ +Insert()
+ +Remove()
+ -preorder()
+ -inorder()
+ -postorder()
+ +PrintPreorder()
+ +PrintInorder()
+ +PrintPostorder()
+ +Bfs()
+ +IsComplete()
+ +Search()
+ +GetRoot()
+ -bfsKeys()
+ +SaveBinary()
+ +LoadBinary()
+}
+class Entry <<struct>> {
+ +Type : string
+ +Data : json.RawMessage
+}
+class QNode <<struct>> {
+ +A : string
+ +Next : *QNode
+}
+class Queue <<struct>> {
+ -head : *QNode
+ -tail : *QNode
+ +IsEmptyQ()
+ +Push()
+ +Pop()
+ +Top()
+ +PrintQ()
+ +GetHead()
+ +SaveBinary()
+ +LoadBinary()
+}
+class SNode <<struct>> {
+ +A : string
+ +Next : *SNode
+}
+class Stack <<struct>> {
+ -head : *SNode
+ +IsEmptyStack()
+ +Push()
+ +Pop()
+ +Top()
+ +Print()
+ +GetHead()
+ +SaveBinary()
+ +LoadBinary()
+}
+Flist *-- FNode
+Dlist *-- DNode
+Queue *-- QNode
+Stack *-- SNode
+HashTable *-- Node
+AVLTree *-- TreeNode
+@enduml

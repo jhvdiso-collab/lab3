@@ -1,0 +1,131 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Array {
+ - data : string*
+ - size : int
+ - capacity : int
+ - resizeArray()
+ + pushBack(value)
+ + insertAt(value,index)
+ + removeAt(index)
+ + getAt(index)
+ + setAt(value,index)
+ + lenght()
+ + saveBinary(file)
+ + loadBinary(file)
+}
+class Flist {
+ - head : FNode*
+ + pushFront(value)
+ + addTail(value)
+ + addOne(node,value)
+ + addBefore(node,value)
+ + deleteNode(node)
+ + deleteBefore(node)
+ + findValue(value)
+ + popFront()
+ + popTail()
+}
+class FNode { 
+ + value : string
+ + next : FNode*
+}
+class Dlist {
+ - head : DNode*
+ - tail : DNode*
+ + pushFront(value)
+ + pushBack(value)
+ + pushBeetwen(node,value)
+ + pushBefore(node,value)
+ + popAfter(node)
+ + popBefore(node)
+ + findName(value)
+}
+class DNode {
+ + person : string
+ + next : DNode*
+ + prev : DNode*
+}
+class Stack {
+ - head : SNode*
+ + push(value)
+ + pop()
+ + top()
+}
+class SNode {
+ + a : string
+ + next : SNode*
+}
+class Queue {
+ - head : QNode*
+ - tail : QNode*
+ + push(value)
+ + pop()
+ + top()
+}
+class QNode {
+ + a : string
+ + next : QNode*
+}
+class HashTable {
+ - table : Node*[100]
+ - hashKey(key)
+ + add(key)
+ + remove(key)
+ + search(key)
+}
+class Node {
+ + value : int
+ + next : Node*
+}
+class Kukushka {
+ - size : int
+ - t1 : int*
+ - t2 : int*
+ - used1 : bool*
+ - used2 : bool*
+ - hash1(key)
+ - hash2(key)
+ - moreplace()
+ + insert(key)
+ + remove(key)
+ + search(key)
+}
+class AVLTree {
+ - root : TreeNode*
+ - height(node)
+ - balance(node)
+ - rotateLeft(node)
+ - rotateRight(node)
+ - insertNode(node,key)
+ - removeNode(node,key)
+ + insert(key)
+ + remove(key)
+ + search(key)
+ + isComplete()
+ + saveBinary(file)
+ + loadBinary(file)
+}
+class TreeNode {
+ + key : int
+ + height : int
+ + left : TreeNode*
+ + right : TreeNode*
+}
+Flist *-- FNode
+FNode --> FNode : next
+Dlist *-- DNode
+DNode --> DNode : next / prev
+Stack *-- SNode
+SNode --> SNode : next
+Queue *-- QNode
+QNode --> QNode : next
+HashTable *-- Node
+Node --> Node : next
+AVLTree *-- TreeNode
+TreeNode --> TreeNode : left / right
+note bottom
+Основные поля и методы; вспомогательные операции печати
+и сериализации для части классов опущены для читаемости.
+end note
+@enduml
