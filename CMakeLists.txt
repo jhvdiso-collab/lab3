@@ -1,0 +1,59 @@
+cmake_minimum_required(VERSION 4.3)
+project(Lab3_GitHub_ready)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(lab3-upload)
+include_directories(lab3-upload/tests)
+
+add_executable(Lab3_GitHub_ready
+        lab3-upload/benchmarks/bench.cpp
+        lab3-upload/benchmarks/bench_local.cpp
+        lab3-upload/tests/boost/main.cpp
+        lab3-upload/tests/boost/test_array.cpp
+        lab3-upload/tests/boost/test_commands.cpp
+        lab3-upload/tests/boost/test_dlist.cpp
+        lab3-upload/tests/boost/test_flist.cpp
+        lab3-upload/tests/boost/test_hash.cpp
+        lab3-upload/tests/boost/test_queue.cpp
+        lab3-upload/tests/boost/test_serialization.cpp
+        lab3-upload/tests/boost/test_stack.cpp
+        lab3-upload/tests/boost/test_tree.cpp
+        lab3-upload/tests/catch2/test_array.cpp
+        lab3-upload/tests/catch2/test_commands.cpp
+        lab3-upload/tests/catch2/test_dlist.cpp
+        lab3-upload/tests/catch2/test_flist.cpp
+        lab3-upload/tests/catch2/test_hash.cpp
+        lab3-upload/tests/catch2/test_queue.cpp
+        lab3-upload/tests/catch2/test_serialization.cpp
+        lab3-upload/tests/catch2/test_stack.cpp
+        lab3-upload/tests/catch2/test_tree.cpp
+        lab3-upload/tests/gtest/test_array.cpp
+        lab3-upload/tests/gtest/test_commands.cpp
+        lab3-upload/tests/gtest/test_dlist.cpp
+        lab3-upload/tests/gtest/test_flist.cpp
+        lab3-upload/tests/gtest/test_hash.cpp
+        lab3-upload/tests/gtest/test_queue.cpp
+        lab3-upload/tests/gtest/test_serialization.cpp
+        lab3-upload/tests/gtest/test_stack.cpp
+        lab3-upload/tests/gtest/test_tree.cpp
+        lab3-upload/tests/capture.h
+        lab3-upload/array.cpp
+        lab3-upload/array.h
+        lab3-upload/avl_tree.cpp
+        lab3-upload/avl_tree.h
+        lab3-upload/commands.cpp
+        lab3-upload/commands.h
+        lab3-upload/doubly_list.cpp
+        lab3-upload/doubly_list.h
+        lab3-upload/hash_table.cpp
+        lab3-upload/hash_table.h
+        lab3-upload/json_library.cpp
+        lab3-upload/main.cpp
+        lab3-upload/queue.cpp
+        lab3-upload/queue.h
+        lab3-upload/serialization.h
+        lab3-upload/singly_list.cpp
+        lab3-upload/singly_list.h
+        lab3-upload/stack.cpp
+        lab3-upload/stack.h)
